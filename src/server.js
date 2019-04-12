@@ -10,10 +10,9 @@ var indexRoute = require('./routes/index-route');
 var productRoute = require('./routes/products-route');
 const customerRoute = require('./routes/customer-route');
 
-//var config = require('./config')
+var config = require('./config')
 //PERSISTÊNCIA
-mongoose.connect('mongodb://localhost/bdCrud');
-//mongoose.connect(config.connectionString);
+mongoose.connect(config.connectionString);
 
 //Configurar a app para usar o body-parser
 app.use(bodyParser.urlencoded({extended:true}));
